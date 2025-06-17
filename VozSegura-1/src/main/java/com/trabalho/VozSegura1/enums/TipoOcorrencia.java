@@ -1,4 +1,4 @@
-package com.trabalho.VozSegura1.Enums;
+package com.trabalho.VozSegura1.enums;
 
 public enum TipoOcorrencia {
     AGRESSAO,

@@ -1,7 +1,7 @@
-package com.trabalho.VozSegura1.Controller;
+package com.trabalho.VozSegura1.controller;
 
-import com.trabalho.VozSegura1.Models.Denuncia;
-import com.trabalho.VozSegura1.Service.DenunciaService;
+import com.trabalho.VozSegura1.models.Denuncia;
+import com.trabalho.VozSegura1.service.DenunciaService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -39,6 +39,12 @@ public class DenunciaController {
     public ResponseEntity<Void> deletarDenuncia(){
         denunciaService.deletarDenuncia();
         return ResponseEntity.noContent().build();
+    }
+
+    private boolean isAnonima(Denuncia denuncia) {
+        return (denuncia.getNomeCompleto() == null || denuncia.getNomeCompleto().isBlank())
+                && (denuncia.getEmail() == null || denuncia.getEmail().isBlank())
+                &&(denuncia.getTelefone() == null|| denuncia.getTelefone().isBlank());
     }
 
 

@@ -1,7 +1,7 @@
-package com.trabalho.VozSegura1.Models;
+package com.trabalho.VozSegura1.models;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.trabalho.VozSegura1.Enums.TipoOcorrencia;
+import com.trabalho.VozSegura1.enums.TipoOcorrencia;
 import jakarta.persistence.*;
 import lombok.*;
 

@@ -1,7 +1,7 @@
-package com.trabalho.VozSegura1.Service;
+package com.trabalho.VozSegura1.service;
 
-import com.trabalho.VozSegura1.Models.Denuncia;
-import com.trabalho.VozSegura1.Repository.IDenunciaRepository;
+import com.trabalho.VozSegura1.models.Denuncia;
+import com.trabalho.VozSegura1.repository.IDenunciaRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
