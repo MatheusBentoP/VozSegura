@@ -1,11 +1,15 @@
 package com.trabalho.VozSegura1.models;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.trabalho.VozSegura1.enums.TipoOcorrencia;
 import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity
 @Table(name = "denuncia")
 @Data
@@ -42,6 +46,10 @@ public class Denuncia {
     @Column(name = "tipo_ocorrencia")
     private TipoOcorrencia tipoOcorrencia;
 
+
+    @OneToMany(mappedBy = "denuncia", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonManagedReference
+    private List<Evidencia> evidencias = new ArrayList<>();
 
     public Long getId() {
         return id;
@@ -105,6 +113,20 @@ public class Denuncia {
 
     public void setTipoOcorrencia(TipoOcorrencia tipoOcorrencia) {
         this.tipoOcorrencia = tipoOcorrencia;
+    }
+
+
+    public List<Evidencia> getEvidencias() {
+        return evidencias;
+    }
+
+    public void setEvidencias(List<Evidencia> evidencias) {
+        this.evidencias = evidencias;
+    }
+
+    public void addEvidencia(Evidencia evidencia) {
+        evidencia.setDenuncia(this); // seta a denúncia na evidência
+        this.evidencias.add(evidencia); // adiciona na lista local
     }
 
 
