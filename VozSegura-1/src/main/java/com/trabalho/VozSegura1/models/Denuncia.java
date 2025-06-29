@@ -31,7 +31,7 @@ public class Denuncia {
     private String telefone;
 
 
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @Column(name = "data")
     private LocalDate data;
 
