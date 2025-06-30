@@ -1,9 +1,9 @@
 package com.trabalho.VozSegura1.enums;
 
 public enum TipoOcorrencia {
-    VIOLÊNCIA_FÍSICA,
-    DISCRIMINAÇÃO,
-    VIOLÊNCIA_PSICOLÓGICA,
-    VIOLÊNCIA_SEXUAL,
+    DISCRIMINACAO,
+    VIOLENCIA_FISICA,
+    VIOLENCIA_PSICOLOGICA,
+    VIOLENCIA_SEXUAL,
     OUTRO
 }

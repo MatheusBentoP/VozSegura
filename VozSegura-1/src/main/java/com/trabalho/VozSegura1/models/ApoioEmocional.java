@@ -19,8 +19,8 @@ public class ApoioEmocional {
     private String nome;
     @Column(name = "email")
     private String email;
-    @Column(name = "descricao")
-    private String descricao;
+    @Column(name = "mensagem")
+    private String mensagem;
 
 
     public Long getId() {
@@ -47,12 +47,12 @@ public class ApoioEmocional {
         this.email = email;
     }
 
-    public String getDescricao() {
-        return descricao;
+    public String getMensagem() {
+        return mensagem;
     }
 
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
+    public void setMensagem(String mensagem) {
+        this.mensagem = mensagem;
     }
 
 }
