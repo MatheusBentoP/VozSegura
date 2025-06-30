@@ -125,8 +125,8 @@ public class Denuncia {
     }
 
     public void addEvidencia(Evidencia evidencia) {
-        evidencia.setDenuncia(this); // seta a denúncia na evidência
-        this.evidencias.add(evidencia); // adiciona na lista local
+        evidencia.setDenuncia(this);
+        this.evidencias.add(evidencia);
     }
 
 
